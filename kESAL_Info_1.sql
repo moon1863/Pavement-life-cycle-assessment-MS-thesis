@@ -1,0 +1,7 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT [STATE_CODE_EXP]
+      ,[SHRP_ID]
+      ,AVG(CAST([KESAL_YEAR] AS DECIMAL(10,3))) AS KESAL_PER_YEAR
+	  FROM [Bucket_30922].[dbo].[TRF_ESAL_COMPUTED]
+	  GROUP BY [STATE_CODE_EXP],[SHRP_ID]
+	  ORDER BY [STATE_CODE_EXP],[SHRP_ID]
